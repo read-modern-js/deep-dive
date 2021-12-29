@@ -1,7 +1,7 @@
 # Modern JS Deep Dive Reading
 
 
-![XL](https://user-images.githubusercontent.com/46489446/147623793-81366884-23e2-41bd-96c9-71d846ebcfe8.jpeg)
+<h2><img src="https://user-images.githubusercontent.com/46489446/147623793-81366884-23e2-41bd-96c9-71d846ebcfe8.jpeg"></h2>
 
 ---
 ### Intension
