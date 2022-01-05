@@ -2,6 +2,7 @@
 
 
 <h2><img src="https://user-images.githubusercontent.com/46489446/147623793-81366884-23e2-41bd-96c9-71d846ebcfe8.jpeg" height="300" width="246"></h2>
+
 ### Schedule
 
 | Round | Chapter | Date |
