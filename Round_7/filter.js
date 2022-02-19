@@ -16,16 +16,15 @@ const DATA = [
     'kiwi',
     'grapefruit'
 ]
-
-const filter = (text) => {
-    const filteredData = DATA.filter((data) => {
+const filter = (text, arr) => {
+    const filteredData = arr.filter((data) => {
         const itemData = data.toUpperCase();
         const textData = text.toUpperCase();
-        return itemData.indexOf(textData) > -1;
+        return itemData.includes(textData)
     });
 
     return filteredData;
 }
-const text = '';
-const filteredData = filter(text);
+const text = 'a';
+const filteredData = filter(text, DATA);
 console.log(filteredData);
