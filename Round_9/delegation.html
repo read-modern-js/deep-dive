@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits{
+            display:flex;
+            list-style-type: none;
+            padding:0;
+        }
+        #fruits li{
+            width:100px;
+            cursor: pointer;
+        }
+        #fruits .active{
+            color:red;
+            text-decoration: underline;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="fruits">
+            <li id="apple" >apple</li>
+            <li id="banana">banana</li>
+            <li id="orange">orange</li>
+        </ul>
+    </nav>
+    <div>선택된 아이템: <em class="msg">없음</em></div>
+    <script>
+        //getElementById,getElementByTagName,getElementByClassName
+        //HTMLCollection 객체에 담아 반환함, 유사 배열 객체이면서 이터러블
+        //querySelectorAll은 NodeList 객체를 반환함 (유사 배열 객체이면서 이터러블), querySelector은 하나의 요소 노드를 반환함
+
+        const $fruits = document.getElementById('fruits');
+        const $msg = document.querySelector('.msg');
+        function activate({target}){
+            if (!target.matches('#fruits>li')) return; //fruits 아래에 있는 li에서 발생한게 맞나?
+            [...$fruits.children].forEach($fruit=>{
+                $fruit.classList.toggle('active',$fruit===target); //reflow, repaint 발생
+                $msg.textContent=target.id;
+            });
+        }
+        $fruits.onclick=activate;
+    </script>
+</body>
+</html>
