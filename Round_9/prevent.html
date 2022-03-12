@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="hello" id="asdf">
+    <script>
+        const ch = document.querySelector('#asdf');
+        ch.onclick=(e)=>{
+            e.preventDefault();
+            alert('체크 대신 알림을 드리겠습니다')
+        }
+    </script>
+</body>
+</html>
