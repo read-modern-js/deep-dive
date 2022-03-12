@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.bing{
+            width: 500px;
+            height: 500px;
+            border-radius: 20%;
+            background-color: aquamarine;
+        }
+        div.bor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin-top: 150px;
+        }
+        div.pa{
+            display: flex;
+            justify-content: center;
+        }
+        div p{
+            cursor: pointer;
+            
+        }
+        div{
+            transition: all ease 1s;
+        }
+        div.rotate{
+            animation-duration: 0.3s;
+            animation-name: bingle;
+            animation-fill-mode: forwards;
+        }
+
+@keyframes bingle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+    </style>
+</head>
+<body>
+<div class="bor">
+    <div class="bing"></div>
+</div>
+<div class="pa"><p>이걸 클릭해봐!</p></div>
+<script>
+    const c = document.querySelector('.bing');
+    const cev = new CustomEvent('willclick');
+    const pp = document.querySelector('div p');
+    c.addEventListener('willclick',e=>{
+        var x = Math.floor(Math.random() * 256);
+        var y = Math.floor(Math.random() * 256);
+        var z = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")"; //무작위 색깔 생성
+        c.style.backgroundColor=bgColor;
+        c.classList.toggle('rotate');
+    })
+    pp.addEventListener('click',e=>{
+        c.dispatchEvent(cev);
+    })
+</script>
+</body>
+</html>
