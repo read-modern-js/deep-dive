@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" type="image/x-icon">
+    <title>마지막 스터디!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="banner">Notion API를 이용한 Database, Promise</div>
+    <div id="uslist">현재 등록중인 유저 목록</div>
+    <div id="wrapper">
+      <div id="container"></div>
+    </div>
+      <div id="addUserFormContainer">
+        <button id="closeFormButton">Close</button>
+        <form method="POST" action="/submit-form" id="addUserForm">
+          <pre id="formTitle">새로운 유저를 만들어요!</pre>
+          <input
+            type="text"
+            name="name"
+            placeholder="Insert user name"
+            class="inputField"
+            required
+          />
+          <input
+            type="text"
+            name="role"
+            placeholder="Insert user role"
+            class="inputField"
+            required
+          />
+          <input type="submit" id="submitFormInput" />
+        </form>
+      </div>
+      
+      <button id="newUserButton">표에 유저 추가하기</button>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
